@@ -1,6 +1,6 @@
 # Put Me On
 
-The one stop shop for discovering new music and genres.
+The one stop shop for discovering new music and genres. <https://putmeon.herokuapp.com/>
 
 ## What is Put Me On?
 
