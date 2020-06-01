@@ -9,7 +9,7 @@ const homePage = () => {
             images={
                 links.images
             }
-            how={100} /* Pass the number of images Sky will render chosing randomly */
+            how={151} /* Pass the number of images Sky will render chosing randomly */
             time={100} /* time of animation */
             size={'100px'} /* size of the rendered images */
             />

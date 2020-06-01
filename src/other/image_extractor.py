@@ -6,15 +6,15 @@ import json
 class image_extractor():
 
     def __init__(self):
-       self.driver = webdriver.Chrome('/Users/advithchegu/Desktop/Random Code/PutMeOn/other/chromedriver')
+       self.driver = webdriver.Chrome('/Users/advithchegu/Desktop/Random Code/PutMeOn/src/other/chromedriver')
 
     def extract(self):
         #links = open('links.json', 'w')
-        self.driver.get('https://www.billboard.com/photos/6715351/best-album-covers-of-all-time')
-        article = self.driver.find_element_by_class_name('article__content-well')
-        img_tags = article.find_elements_by_class_name('gallery-item__image')
+        self.driver.get('https://www.udiscovermusic.com/stories/the-100-greatest-album-covers/')
+        article = self.driver.find_element_by_id('mvp-content-main')
+        img_tags = article.find_elements_by_tag_name('img')
         img_dict = {}
-        count = 0
+        count = 51
         for i in img_tags:
             img_dict.update({str(count) : i.get_attribute('src')})
             count += 1
