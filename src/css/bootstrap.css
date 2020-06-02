@@ -26,7 +26,7 @@
   --white: #fff;
   --gray: #868e96;
   --gray-dark: #343a40;
-  --primary: #DF691A;
+  --primary: #e0691a;
   --secondary: #4E5D6C;
   --success: #5cb85c;
   --info: #5bc0de;
@@ -5624,7 +5624,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
   background-color: #4E5D6C;
-  border-radius: 0px;
+  border-radius: 10px;
 }
 
 @media (min-width: 576px) {
