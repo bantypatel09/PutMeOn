@@ -23,6 +23,7 @@ type OptionType = {
 interface IDropdownProps {
   options: OptionType[];
   onChange?: (selectedItem: string) => void; // this is for later
+  temp: string;
 }
 
 const Dropdown: React.FC<IDropdownProps> = ({ onChange, temp, options }) => {
@@ -61,7 +62,7 @@ const Dropdown: React.FC<IDropdownProps> = ({ onChange, temp, options }) => {
             {/* add this to clear the currently selected item */}
             <Button
               className="ml-1 btn btn-outline-primary"
-              onClick={clearSelection}
+              //onClick={clearSelection}
             >
               x
             </Button>
