@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import Sky from "react-sky";
 import links from "../other/links.json";
 import Container from "react-bootstrap/Container";
@@ -6,9 +6,22 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import Dropdown from "react-bootstrap/Dropdown"
+import Dropdown from "./dropdown.tsx";
+import Downshift from "downshift";
 
-class HomePage extends Component {
+const data = [
+  { value: "Harry Potter and the Sorcerers Stone" },
+  { value: "Harry Potter and the Prisoner of Azkaban" },
+  { value: "Harry Potter and the Goblet of Fire" },
+  { value: "Harry Potter and the Deathly Hallows" },
+];
+
+function selectedItem(val) {
+  console.log(val);
+}
+
+export default class HomePage extends Component {
+  
   render() {
     return (
       <div>
@@ -34,27 +47,19 @@ class HomePage extends Component {
             <div>
               <Form.Row controlId="Artist-Enter">
                 <Col>
-                  <Form.Label>Artist 1</Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter the source artist"
-                  />
+                  <Dropdown onChange={selectedItem} temp="Enter Source Artist" options={data} />
                   <Form.Text className="text-muted">
                     This is the starting point of your playlist/path.
                   </Form.Text>
                 </Col>
                 <Col>
-                  <Form.Label>Artist 2</Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter the destination artist"
-                  />
+                  <Dropdown onChange={selectedItem} temp="Enter Destination Artist" options={data} />
                   <Form.Text className="text-muted">
                     This is the ending point of your playlist/path.
                   </Form.Text>
                 </Col>
                 <Col xs="auto">
-                  <Button type="submit" variant="primary" className="mt-4-2">
+                  <Button type="submit" variant="primary">
                     Search!
                   </Button>{" "}
                 </Col>
@@ -66,5 +71,3 @@ class HomePage extends Component {
     );
   }
 }
-
-export default HomePage;
