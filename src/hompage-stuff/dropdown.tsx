@@ -46,7 +46,7 @@ const Dropdown: React.FC<IDropdownProps> = ({ onChange, temp, options }) => {
         clearSelection, // add this to clear the currently selected item
       }) => (
         <Form {...getRootProps()}>
-          <InputContainer>
+          <InputContainer className="container">
             <Input
               type="text"
               placeholder={temp}
