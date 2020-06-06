@@ -67,7 +67,7 @@ const Dropdown: React.FC<IDropdownProps> = ({ onChange, temp, options }) => {
               x
             </Button>
           </InputContainer>
-          <Menu className="list-group" {...getMenuProps()}>
+          <Menu className="pr-6 pl-3 list-group" {...getMenuProps()}>
             {isOpen &&
               options
                 .filter(

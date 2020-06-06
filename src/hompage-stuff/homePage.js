@@ -7,7 +7,6 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Dropdown from "./dropdown.tsx";
-import Downshift from "downshift";
 
 const data = [
   { value: "Harry Potter and the Sorcerers Stone" },
