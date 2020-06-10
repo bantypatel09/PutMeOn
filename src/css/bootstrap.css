@@ -5620,6 +5620,28 @@ a.badge-dark:focus, a.badge-dark.focus {
           box-shadow: 0 0 0 0.2rem rgba(78, 93, 108, 0.5);
 }
 
+
+.butt{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 3px;
+  justify-content: 'center';
+}
+
+.image{
+  width: 250px;
+  height: 212.5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2rem;
+  border-radius: 29px;
+}
+
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
