@@ -7,13 +7,7 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Dropdown from "./dropdown.tsx";
-
-const data = [
-  { value: "Harry Potter and the Sorcerers Stone" },
-  { value: "Harry Potter and the Prisoner of Azkaban" },
-  { value: "Harry Potter and the Goblet of Fire" },
-  { value: "Harry Potter and the Deathly Hallows" },
-];
+import Data from "./data.json"
 
 function selectedItem(val) {
   console.log(val);
@@ -46,13 +40,13 @@ export default class HomePage extends Component {
             <div>
               <Form.Row controlId="Artist-Enter">
                 <Col>
-                  <Dropdown onChange={selectedItem} temp="Enter Source Artist" options={data} />
+                  <Dropdown onChange={selectedItem} temp="Enter Source Artist" options={Data} />
                   <Form.Text className="text-muted">
                     This is the starting point of your playlist/path.
                   </Form.Text>
                 </Col>
                 <Col>
-                  <Dropdown onChange={selectedItem} temp="Enter Destination Artist" options={data} />
+                  <Dropdown onChange={selectedItem} temp="Enter Destination Artist" options={Data} />
                   <Form.Text className="text-muted">
                     This is the ending point of your playlist/path.
                   </Form.Text>
