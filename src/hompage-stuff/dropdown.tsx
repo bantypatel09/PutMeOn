@@ -73,7 +73,7 @@ const Dropdown: React.FC<IDropdownProps> = ({ onChange, temp, options }) => {
                 .filter(
                   (item) => !inputValue || item.value.includes(inputValue)
                 ) // added to narrow down options
-                .map((item, index) => (
+                .slice(0,5).map((item, index) => (
                   <Item
                     {...getItemProps({
                       className: (index === highlightedIndex) ? "list-group-item active" : "list-group-item border-primary",
